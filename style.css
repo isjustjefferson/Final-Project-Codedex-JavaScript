@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Ben10Font';
+    src: url('fonts/ben10.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --omni-green: #39FF14;
+    --omni-glow: rgba(57, 255, 20, 0.5);
+    --metal-plate: #1a1a1a;
+}
+
+html {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    min-height: 100vh;
+    font-family: 'Ben10Font', sans-serif;
+    color: var(--omni-green); 
+    text-shadow: 2px 2px 0px #000;
+    background-image: linear-gradient(-20deg, #025159 0%, #733b36 100%);
+    background-size: cover;
+}
+
+.app-container {
+    width: 250px;
+    height: 420px;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.app-circle {
+    position: relative;
+    margin: 10px auto;
+    width: 240px;
+    height: 240px;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid var(--metal-plate);
+    box-shadow: 0 0 25px var(--omni-glow), inset 0 0 20px var(--omni-glow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.app-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--omni-green);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 50%, 100% 100%, 0% 100%, 50% 50%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.app-counter-box {
+    font-size: 2.8rem; 
+    position: relative;
+    z-index: 5; 
+    color: #ffffff;
+    text-shadow: 0 0 10px #000, 0 0 15px var(--omni-green);
+    margin: 0;
+    line-height: 1; 
+}
+
+button {
+    position: relative;
+    z-index: 10; 
+    font-size: 0.7rem; 
+    font-family: 'Ben10Font', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.7); 
+    color: var(--omni-green);
+    border: 1px solid var(--omni-green);
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--omni-green);
+    color: #000;
+    box-shadow: 0 0 10px var(--omni-green);
+    transform: scale(1.05);
+}
+
+.semi-circle {
+    position: absolute;
+    width: 120px;
+    height: 240px;
+    box-sizing: border-box;
+    border: solid 8px var(--omni-green);
+    z-index: 4;
+    pointer-events: none; 
+}
+
+.left-side {
+    top: 0px;
+    left: 0px;
+    transform-origin: right center;
+    border-top-left-radius: 110px;
+    border-bottom-left-radius: 110px;
+    border-right: none;
+}
+
+.right-side {
+    top: 0px;
+    right: 0px;
+    transform-origin: left center;
+    border-top-right-radius: 110px;
+    border-bottom-right-radius: 110px;
+    border-left: none;
+}
+
+.app-counter-box {
+    font-size: 280%;
+    position: relative;
+    z-index: 5; 
+    color: #ffffff;
+    text-shadow: 0 0 10px #000, 0 0 20px var(--omni-green);
+    top: 0; 
+}
+
+button:hover {
+    background: var(--omni-green);
+    color: black;
+    box-shadow: 0 0 15px var(--omni-green);
+}
