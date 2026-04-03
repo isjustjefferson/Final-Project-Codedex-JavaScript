@@ -41,7 +41,6 @@ This is the final project for the JavaScript track on the **Codédex** platform.
 ### How to run / Como executar
 1. Clone the repository / Clone o repositório: 
    `git clone https://github.com/isjustjefferson/Final-Project-Codedex-JavaScript.git`
-2. Run the script using Node / Execute o script usando Node:
-   `node index.js` (ou o nome do arquivo principal)
+2. Open the `index.html` in your browser / Abra o `index.html` no seu navegador.
 
 ---
